@@ -107,7 +107,7 @@ class EditCampaign extends Component {
   }
 
   focusFirstInput(){
-    setTimeout(() => this.refs.title.element.focus(), 500)
+    // setTimeout(() => this.refs.title.element.focus(), 500)
   }
 
   mapInputs(inputs) {
@@ -140,8 +140,9 @@ class EditCampaign extends Component {
         image: file,
         projectId: this.state.projectId,
         dacs: this.state.dacs,
-      }  
-
+      }
+      console.log(constructedModel.dacs);
+      debugger;
       if(this.props.isNew){
         const createCampaign = (txHash) => {
           constructedModel.txHash = txHash;
