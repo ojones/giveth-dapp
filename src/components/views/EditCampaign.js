@@ -111,7 +111,7 @@ class EditCampaign extends Component {
   }
 
   focusFirstInput(){
-    setTimeout(() => this.refs.title.element.focus(), 500)
+    // setTimeout(() => this.refs.title.element.focus(), 500)
   }
 
   mapInputs(inputs) {
@@ -146,8 +146,8 @@ class EditCampaign extends Component {
         projectId: this.state.projectId,
         dacs: this.state.dacs,
         reviewerAddress: model.reviewerAddress      
-      }  
-
+      }
+        
       if(this.props.isNew){
         const createCampaign = (txHash) => {
           feathersClient.service('campaigns').create(Object.assign({}, constructedModel, {

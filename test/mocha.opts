@@ -1,5 +1,6 @@
-src/**/*test.js
+test/**/*test.js
 --compilers js:babel-register
 --require ./test/helpers.js
 --require ./test/dom.js
 --recursive
+--harmony
